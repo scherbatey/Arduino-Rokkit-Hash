@@ -5,9 +5,9 @@
   "repository":
   {
     "type": "git",
-    "url": "https://github.com/scherbatey/Arduino-Rokkit-Hash.git"
+    "url": "https://github.com/scherbatey/Arduino-Rokkit-Hash.git#arduino_library"
   },
-  "version": "20151212",
+  "version": "20181002",
   "authors": [
     {
       "name": "SukkoPera",
