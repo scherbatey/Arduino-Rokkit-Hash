@@ -48,6 +48,7 @@ uint32_t rokkit (const char *data, uint16_t len);
 
 #include <Arduino.h>
 
+uint32_t rokkit (const __FlashStringHelper *data, uint16_t len, uint32_t seed);
 uint32_t rokkit (const __FlashStringHelper *data, uint16_t len);
 
 #endif

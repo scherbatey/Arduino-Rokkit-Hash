@@ -25,6 +25,10 @@
 #include "RokkitHash.h"
 
 uint32_t rokkit (const char *data, uint16_t len) {
+    return rokkit (data, len, seed);
+}
+
+uint32_t rokkit (const char *data, uint16_t len, uint32_t seed) {
 #ifndef ROKKIT_ENABLE_8BIT_OPTIMIZATIONS
 	// This is mostly Paul Hsieh's original code
 	uint32_t hash, tmp;
@@ -34,7 +38,7 @@ uint32_t rokkit (const char *data, uint16_t len) {
 		return 0;
 	}
 
-	hash = len;
+    hash = seed;
 	rem = len & 3;
 	len >>= 2;
 
