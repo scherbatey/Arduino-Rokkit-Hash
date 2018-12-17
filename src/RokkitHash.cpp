@@ -38,7 +38,7 @@ uint32_t rokkit (const char *data, uint16_t len, uint32_t seed) {
 		return 0;
 	}
 
-    hash = seed;
+	hash = seed;
 	rem = len & 3;
 	len >>= 2;
 
@@ -106,7 +106,7 @@ uint32_t rokkit (const char *data, uint16_t len, uint32_t seed) {
 		return 0;
 	}
 
-	hash.h = len;
+	hash.h = seed;
 	rem = len & 3;
 	len >>= 2;
 
