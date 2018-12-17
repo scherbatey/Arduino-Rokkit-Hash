@@ -25,7 +25,7 @@
 #include "RokkitHash.h"
 
 uint32_t rokkit (const char *data, uint16_t len) {
-    return rokkit (data, len, seed);
+    return rokkit (data, len, len);
 }
 
 uint32_t rokkit (const char *data, uint16_t len, uint32_t seed) {
