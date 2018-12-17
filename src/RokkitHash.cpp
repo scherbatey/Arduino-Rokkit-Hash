@@ -194,6 +194,10 @@ uint32_t rokkit (const char *data, uint16_t len, uint32_t seed) {
 #include <avr/pgmspace.h>
 
 uint32_t rokkit (const __FlashStringHelper *data, uint16_t len) {
+	return rokkit (data, len, len); 
+}
+
+uint32_t rokkit (const __FlashStringHelper *data, uint16_t len, uint32_t seed) {
 	union {
 		uint32_t h;
 		uint16_t b[2];
@@ -206,7 +210,7 @@ uint32_t rokkit (const __FlashStringHelper *data, uint16_t len) {
 	}
 
 	PGM_P p = reinterpret_cast <PGM_P> (data);
-	hash.h = len;
+	hash.h = seed;
 	rem = len & 3;
 	len >>= 2;
 
