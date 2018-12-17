@@ -42,6 +42,7 @@
 #define ROKKIT_ENABLE_8BIT_OPTIMIZATIONS
 #define ROKKIT_ENABLE_FLASH_FUNCTIONS
 
+uint32_t rokkit (const char *data, uint16_t len, uint32_t seed);
 uint32_t rokkit (const char *data, uint16_t len);
 
 #ifdef ROKKIT_ENABLE_FLASH_FUNCTIONS
